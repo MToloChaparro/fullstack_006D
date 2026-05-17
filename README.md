@@ -7,7 +7,7 @@ Asignatura: Desarrollo Fullstack
 Profesora: VIVIANA SOLEDAD POBLETE LOPEZ
 
 
-# GestionEcogarzones - Ecosistema de Microservicios 🚀
+# GestionEcogarzones - Ecosistema de Microservicios
 
 Ecosistema distribuido desarrollado con **Spring Boot** y **Spring Cloud** para la gestión logística, financiera y de personal de la empresa de garzoneria y bartender *Ecogarzones*.
 
