@@ -1,10 +1,10 @@
 # Readme - Evaluación 2 Desarrollo Fullstack
 
-nombre: Matias Toloza Chaparro
-Carrera: Ing. Informatica
-Sección: fullstack_006D
-Asignatura: Desarrollo Fullstack
-Profesora: VIVIANA SOLEDAD POBLETE LOPEZ
+- nombre: Matias Toloza Chaparro
+- Carrera: Ing. Informatica
+- Sección: fullstack_006D
+- Asignatura: Desarrollo Fullstack
+- Profesora: VIVIANA SOLEDAD POBLETE LOPEZ
 
 
 # GestionEcogarzones - Ecosistema de Microservicios
