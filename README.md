@@ -1,8 +1,8 @@
 # Readme - Evaluación 2 Desarrollo Fullstack
 
-- nombre: Matias Toloza Chaparro
-- Carrera: Ing. Informatica
-- Sección: fullstack_006D
+- nombre: MATÍAS TOLOZA CHAPARRO
+- Carrera: Ing. Informatica - DUOC UC: Sede Maipú
+- Sección: 006D
 - Asignatura: Desarrollo Fullstack
 - Profesora: VIVIANA SOLEDAD POBLETE LOPEZ
 
