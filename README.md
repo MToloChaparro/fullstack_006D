@@ -37,9 +37,9 @@ El proyecto implementa el patrón Base de datos por microservicio, centralizando
 
 ## Direcciones Postman:
 
-Cliente: https://Localhost.8083/api/v1/clientes
-Administrador: https://Localhost.8084/api/v1/administrador
-Evento: https://Localhost.8081/api/v1/eventos
-Pago Servicio: https://Localhost.8085/api/v1/pagos
-Staff: https://Localhost.8082/api/v1/staff
+- Cliente: https://Localhost.8083/api/v1/clientes
+- Administrador: https://Localhost.8084/api/v1/administrador
+- Evento: https://Localhost.8081/api/v1/eventos
+- Pago Servicio: https://Localhost.8085/api/v1/pagos
+- Staff: https://Localhost.8082/api/v1/staff
 
