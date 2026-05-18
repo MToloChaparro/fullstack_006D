@@ -7,11 +7,12 @@
 - Profesora: VIVIANA SOLEDAD POBLETE LOPEZ
 
 
-# GestionEcogarzones - Ecosistema de Microservicios
+# GestionEcogarzones - Ecosistema de Microservicios:
 
-Ecosistema distribuido desarrollado con **Spring Boot** y **Spring Cloud** para la gestión logística, financiera y de personal de la empresa de garzoneria y bartender *Ecogarzones*.
+Ecosistema distribuido desarrollado con Spring Boot y Spring Cloud para la gestión logística, financiera y de personal de la empresa de garzoneria y bartender *Ecogarzones*. El sistema busca modernizar y solucionar problemas de gestión y
+administracion de los servicios solicitados por los clientes, al mismo tiempo que organizar datos de negocios; desde el personal, los servicios agendados, los pagos concretados y la asignación de personal a los servicios correspondientes.
 
-## Arquitectura del Sistema
+## Arquitectura del Sistema:
 
 El proyecto implementa el patrón Base de datos por microservicio, centralizando el tráfico externo a través de un API Gateway.
 
@@ -25,7 +26,7 @@ El proyecto implementa el patrón Base de datos por microservicio, centralizando
 
 ---
 
-## Tecnologías Utilizadas
+## Tecnologías Utilizadas:
 
 - **Backend:** Java 21.0.10, Spring Boot 4.0.6
 - **Ecosistema Cloud:** Spring Cloud Gateway WebMVC
@@ -33,4 +34,12 @@ El proyecto implementa el patrón Base de datos por microservicio, centralizando
 - **Base de Datos:** MySQL
 - **Gestor de Dependencias:** Maven
 - **Control de Versiones:** Git & GitHub
+
+## Direcciones Postman:
+
+Cliente: https://Localhost.8083/api/v1/clientes
+Administrador: https://Localhost.8084/api/v1/administrador
+Evento: https://Localhost.8081/api/v1/eventos
+Pago Servicio: https://Localhost.8085/api/v1/pagos
+Staff: https://Localhost.8082/api/v1/staff
 
