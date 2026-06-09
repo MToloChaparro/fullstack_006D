@@ -2,7 +2,7 @@ package com.inventario.ecogarzones.model;
 
 import lombok.Getter;
 
-@Getter // Lombok genera automáticamente los métodos getDescripcion() y getAbreviacion()
+@Getter
 public enum UnidadMedidaEnum {
     
     UNIDADES("Unidades", "un"),
