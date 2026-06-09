@@ -1,0 +1,80 @@
+package com.ecogarzones.evento.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ecogarzones.evento.model.Evento;
+import com.ecogarzones.evento.service.EventoService;
+
+import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@RestController
+@RequestMapping("/api/v1/eventos")
+public class EventoController {
+    
+    @Autowired
+    private EventoService eventoService;
+
+    @PostMapping
+    public ResponseEntity<Evento> crearEvento(@RequestBody Evento evento) {
+        Evento nuevoEvento = eventoService.crearEvento(evento);
+        return ResponseEntity.ok(nuevoEvento);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<Evento>> obtenerTodosLosEventos() {
+        List<Evento> eventos = eventoService.obtenerTodosLosEventos();
+        if (eventos.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(eventos);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Evento> obtenerEventoPorId(@PathVariable Integer id) {
+        try {
+            Evento evento = eventoService.obtenerEventoPorId(id);
+            return ResponseEntity.ok(evento);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Evento> actualizarEvento(@PathVariable Integer id, @RequestBody Evento eventoActualizado) {
+        try {
+            Evento evento = eventoService.actualizarEvento(id, eventoActualizado);
+            return ResponseEntity.ok(evento);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminarEvento(@PathVariable Integer id) {
+        try {
+            eventoService.eliminarEvento(id);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
+    @GetMapping("/buscar")
+    public ResponseEntity<List<Evento>> buscarEventos(@RequestParam String nombre) {
+        List<Evento> eventos = eventoService.buscarEventosPorNombre(nombre);
+        if (eventos.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(eventos);
+    }
+}
