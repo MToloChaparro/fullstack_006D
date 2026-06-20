@@ -1,0 +1,234 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "EventoApplication",
+            "request": "launch",
+            "mainClass": "com.cronograma.evento.EventoApplication",
+            "projectName": "com.cronograma-evento",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=60353 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=com.cronograma-evento"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientesApplication<clientes>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.clientes.ClientesApplication",
+            "projectName": "clientes",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=56156 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=clientes"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-StaffApplication<staff>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.staff.StaffApplication",
+            "projectName": "staff",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EventoApplication<evento>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.evento.EventoApplication",
+            "projectName": "evento",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TransporteApplication<transporte>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.logistica.transporte.TransporteApplication",
+            "projectName": "transporte",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EventoApplication<com.ecogarzones-evento>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.evento.EventoApplication",
+            "projectName": "com.ecogarzones-evento",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ClientesApplication<com.ecogarzones-clientes>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.clientes.ClientesApplication",
+            "projectName": "com.ecogarzones-clientes",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AdministradorApplication<com.ecogarzones-administrador>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.administrador.AdministradorApplication",
+            "projectName": "com.ecogarzones-administrador",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GatewayApplication<com.ecogarzones-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.gateway.GatewayApplication",
+            "projectName": "com.ecogarzones-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PagoservicioApplication<com.ecogarzones-pagoservicio>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.pagoservicio.PagoservicioApplication",
+            "projectName": "com.ecogarzones-pagoservicio",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-StaffApplication<com.ecogarzones-staff>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.staff.StaffApplication",
+            "projectName": "com.ecogarzones-staff",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EcogarzonesApplication<com.inventario-ecogarzones>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.inventario.ecogarzones.EcogarzonesApplication",
+            "projectName": "com.inventario-ecogarzones",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-TransporteApplication<com.logisitica-transporte>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.logistica.transporte.TransporteApplication",
+            "projectName": "com.logisitica-transporte",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ElectronicaApplication<com.boleta-electronica>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.boleta.electronica.ElectronicaApplication",
+            "projectName": "com.boleta-electronica",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioApplication<usuario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.autenticador.usuario.UsuarioApplication",
+            "projectName": "usuario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UsuarioApplication<com.autenticador-usuario>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.autenticador.usuario.UsuarioApplication",
+            "projectName": "com.autenticador-usuario",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-IncidenciasApplication<incidencias>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.incidencias.IncidenciasApplication",
+            "projectName": "incidencias",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EventoApplication<evento>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cronograma.evento.EventoApplication",
+            "projectName": "evento",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AdministradorApplication<administrador>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.administrador.AdministradorApplication",
+            "projectName": "administrador",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-EcogarzonesApplication<ecogarzones>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.inventario.ecogarzones.EcogarzonesApplication",
+            "projectName": "ecogarzones",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ElectronicaApplication<electronica>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.boleta.electronica.ElectronicaApplication",
+            "projectName": "electronica",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GatewayApplication<gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.gateway.GatewayApplication",
+            "projectName": "gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-PagoservicioApplication<pagoservicio>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ecogarzones.pagoservicio.PagoservicioApplication",
+            "projectName": "pagoservicio",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
