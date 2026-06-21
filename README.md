@@ -1,3 +1,9 @@
+Estudiante: Matias Toloza Chaparro
+Docente: Viviana Soledad Poblete Lopez
+Asignatura: DESARROLLO FULLSTACK I_006D
+
+---
+
 # GestionEcogarzones - Ecosistema de Microservicios
 
 Ecosistema distribuido desarrollado con **Spring Boot** y **Spring Cloud** para la gestión logística, financiera y de personal de la empresa de garzonería y bartender **Ecogarzones**. 
