@@ -12,7 +12,7 @@ El proyecto implementa el patrón de **Base de datos por microservicio**, aislan
 
 * **API Gateway (Puerto 9090):** Punto único de entrada. Se encarga del enrutamiento dinámico hacia los servicios internos, ocultando la topología de la red, centralizando la seguridad y evitando problemas de CORS en el cliente.
 
-### 📊 Topología de Puertos y Responsabilidades
+### Topología de Puertos y Responsabilidades
 
 El ecosistema está fragmentado en **10 microservicios** especializados con responsabilidades únicas:
 
@@ -30,7 +30,7 @@ El ecosistema está fragmentado en **10 microservicios** especializados con resp
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - **Lenguaje de Programación:** Java 25 (OpenJDK)
 - **Framework Principal:** Spring Boot 3.3.4
