@@ -1,7 +1,7 @@
-Estudiante: Matias Toloza Chaparro
-Docente: Viviana Soledad Poblete Lopez
-Asignatura: DESARROLLO FULLSTACK I_006D
-
+- Estudiante: Matias Toloza Chaparro
+- Docente: Viviana Soledad Poblete Lopez
+- Asignatura: DESARROLLO FULLSTACK I_006D
+- Ingeniería en Informatica - Duoc Uc: Sede Maipú
 ---
 
 # GestionEcogarzones - Ecosistema de Microservicios
