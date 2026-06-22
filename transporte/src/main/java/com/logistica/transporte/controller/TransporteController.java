@@ -50,13 +50,11 @@ public class TransporteController {
     }
 
 
-    // URL de ejemplo: GET /api/transportes/buscar/tipo?tipo=STAFF
     @GetMapping("/buscar/tipo")
     public ResponseEntity<List<Transporte>> buscarPorTipo(@RequestParam TipoTransporteEnum tipo) {
         return ResponseEntity.ok(transporteService.buscarPorTipo(tipo));
     }
 
-    // URL de ejemplo: GET /api/transportes/buscar/estado?estado=CONFIRMADO
     @GetMapping("/buscar/estado")
     public ResponseEntity<List<Transporte>> buscarPorEstado(@RequestParam String estado) {
         return ResponseEntity.ok(transporteService.buscarPorEstado(estado));

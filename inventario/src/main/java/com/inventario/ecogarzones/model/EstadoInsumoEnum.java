@@ -2,7 +2,7 @@ package com.inventario.ecogarzones.model;
 
 import lombok.Getter;
 
-@Getter // Genera automáticamente los métodos getDescripcion() y getColor()
+@Getter
 public enum EstadoInsumoEnum {
     
     DISPONIBLE("Disponible para uso", "green"),

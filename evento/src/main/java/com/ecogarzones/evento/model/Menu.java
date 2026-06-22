@@ -1,4 +1,4 @@
-package com.ecogarzones.evento.model; // Ajusta el package según tu proyecto
+package com.ecogarzones.evento.model;
 
 import jakarta.persistence.*;
 import lombok.Data;

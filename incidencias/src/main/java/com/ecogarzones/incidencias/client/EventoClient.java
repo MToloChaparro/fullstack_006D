@@ -8,5 +8,5 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface EventoClient {
 
     @GetMapping("/api/v1/eventos/verificar/{id}")
-    boolean verificarSiEventoExiste(@PathVariable("id") Integer id); // <-- Cambiado Long por Integer
+    boolean verificarSiEventoExiste(@PathVariable("id") Integer id);
 }

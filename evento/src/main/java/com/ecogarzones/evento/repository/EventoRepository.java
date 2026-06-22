@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EventoRepository extends JpaRepository<Evento, Integer> { // Corregido de Long a Integer
+public interface EventoRepository extends JpaRepository<Evento, Integer> {
 
 
     List<Evento> findByNombreEventoContainingIgnoreCase(String nombreEvento);   

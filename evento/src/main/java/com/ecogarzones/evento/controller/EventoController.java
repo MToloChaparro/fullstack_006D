@@ -62,7 +62,7 @@ public class EventoController {
         return ResponseEntity.ok(eventos);
     }
 
-    @GetMapping("/{id}") // Direccion completa: http://localhost:8080/api/v1/eventos/{id} 
+    @GetMapping("/{id}")
     public ResponseEntity<Evento> obtenerEventoPorId(@PathVariable Integer id) {
         try {
             Evento evento = eventoService.obtenerEventoPorId(id);

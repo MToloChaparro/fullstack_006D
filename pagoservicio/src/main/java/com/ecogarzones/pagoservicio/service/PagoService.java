@@ -24,7 +24,7 @@ public class PagoService {
         }
         
         if (pago.getIdEstadoPago() == null) {
-            pago.setIdEstadoPago(EstadoPagoEnum.PENDIENTE.getId()); // Guarda un 1
+            pago.setIdEstadoPago(EstadoPagoEnum.PENDIENTE.getId());
         }
         
         return pagoRepository.save(pago);

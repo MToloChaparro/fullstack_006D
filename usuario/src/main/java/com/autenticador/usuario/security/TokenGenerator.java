@@ -17,7 +17,7 @@ public class TokenGenerator {
         return JWT.create()
                 .withSubject(username)
                 .withIssuer("servicio-auth")
-                .withExpiresAt(new Date(System.currentTimeMillis() + 3600000)) // Expira en 1 hora
+                .withExpiresAt(new Date(System.currentTimeMillis() + 3600000))
                 .sign(algorithm);
     }
 }

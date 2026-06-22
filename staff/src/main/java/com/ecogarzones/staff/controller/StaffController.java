@@ -27,7 +27,6 @@ public class StaffController {
         try {
             Staff staff = staffService.obtenerStaffPorId(idStaff);
             
-            // Mapeo de Rol y Estado
             if (staff.getIdRol() != null) {
                 staff.setNombreRol(RolStaff_Enum.obtenerNombreRol(staff.getIdRol()));
             }
@@ -48,7 +47,6 @@ public class StaffController {
         try {
             Staff staff = staffService.actualizarStaff(idStaff, staffActualizado);
             
-            // Mapeo de Rol y Estado para la respuesta de actualización
             if (staff.getIdRol() != null) {
                 staff.setNombreRol(RolStaff_Enum.obtenerNombreRol(staff.getIdRol()));
             }

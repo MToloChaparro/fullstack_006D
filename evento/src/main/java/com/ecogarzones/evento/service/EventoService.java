@@ -23,14 +23,13 @@ public class EventoService {
 
     private final EventoRepository eventoRepository;
     private final MenuRepository menuRepository;
-    // 🚨 DECLARAMOS EL CLIENTE FEIGN
     private final IncidenciaClient incidenciaClient; 
 
     @Autowired
     public EventoService(EventoRepository eventoRepository, MenuRepository menuRepository, IncidenciaClient incidenciaClient) {
         this.eventoRepository = eventoRepository;
         this.menuRepository = menuRepository;
-        this.incidenciaClient = incidenciaClient; // 🚨 LO INYECTAMOS EN EL CONSTRUCTOR
+        this.incidenciaClient = incidenciaClient;
     }
 
     public Evento crearEvento(Evento evento) {
@@ -53,7 +52,7 @@ public class EventoService {
         return eventoRepository.save(evento);
     }
 
-    // 🔄 MODIFICADO: También le cargamos las incidencias a cada evento de la lista general
+
     @Transactional(readOnly = true)
     public List<Evento> obtenerTodosLosEventos() {
         List<Evento> eventos = eventoRepository.findAll();
@@ -63,13 +62,13 @@ public class EventoService {
         return eventos;
     }
 
-    // 🔄 MODIFICADO: El método GET que estás llamando en Postman para el ID 16
+
     @Transactional(readOnly = true)
     public Evento obtenerEventoPorId(Integer id) {  
         Evento evento = eventoRepository.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Evento no encontrado con ID: " + id));
         
-        // 🚨 LLAMADA A FEIGN: Buscamos las incidencias y las metemos al evento
+
         inyectarIncidenciasAEvento(evento);
         
         return evento;

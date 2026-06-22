@@ -29,7 +29,7 @@ public class Staff {
     @Column(name = "rut_staff", nullable = false)
     private Integer rutStaff;
 
-    @Column(name = "dv_rut", length = 1, nullable = true) // 👈 Cambiado a true
+    @Column(name = "dv_rut", length = 1, nullable = true)
     private String dvRut;
 
     @Column(name = "correo_staff", unique = true)

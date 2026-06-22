@@ -25,7 +25,7 @@ public class UbicacionService {
         InputStream inputStream = getClass().getResourceAsStream("/chiles.json");
         
         if (inputStream == null) {
-            System.out.println("❌ ERROR: No se encontró el archivo chiles.json");
+            System.out.println("ERROR: No se encontró el archivo chiles.json");
             return;
         }
 
@@ -48,7 +48,7 @@ public class UbicacionService {
             .filter(provincia -> provincia.getComunas() != null)
             .flatMap((ProvinciaDto provincia) -> provincia.getComunas().stream())
             .filter(comuna -> comuna.getCodigo() != null && comuna.getCodigo().equalsIgnoreCase(codigoComuna))
-            .map((ComunaDto comuna) -> comuna.getNombre()) // <-- Cambiado de método de referencia a Lambda explícita
+            .map((ComunaDto comuna) -> comuna.getNombre()) 
             .findFirst()
             .orElse("Comuna No Encontrada");
     }

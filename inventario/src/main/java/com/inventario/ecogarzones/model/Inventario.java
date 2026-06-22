@@ -31,14 +31,14 @@ public class Inventario {
     @Column(name = "cantidad_insumo", nullable = false)
     private Integer cantidadInsumo;
 
-    @Enumerated(EnumType.STRING)            // Clase Enum UnidadMedidaEnum.java
+    @Enumerated(EnumType.STRING)
     @Column(name = "unidad_medida", nullable = false)
     private UnidadMedidaEnum unidadMedida;
 
     @Column(name = "precio_costo_unitario", precision = 10, scale = 2)
     private BigDecimal precioCostoUnitario;
 
-    @Enumerated(EnumType.STRING)            // Clase Enum EstadoInsumoEnum.java
+    @Enumerated(EnumType.STRING)
     @Column(name = "estado_insumos", nullable = false)
     private EstadoInsumoEnum estadoInsumo; 
     

@@ -1,13 +1,21 @@
 package com.ecogarzones.evento.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.beans.Transient;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 @Entity
 @Table(name = "ms_evento")
@@ -38,11 +46,7 @@ public class Evento {
     private String idComuna;
 
     @Column(name = "id_estado_evento", nullable = false)
-// Dentro de tu clase Evento.java, asegúrate de que estos atributos luzcan así:
-    private Integer idEstadoEvento; // Asegúrate de usar Integer en lugar de int primitivo
-
-    @Transient
-    private java.util.List<Object> reporteIncidencia; // Forzamos que sea List<Object>
+    private Integer idEstadoEvento;
 
     @Column(name = "nombre_evento", length = 100, nullable = false)
     private String nombreEvento;
@@ -60,11 +64,11 @@ public class Evento {
     private String descripcionEvento;
 
     @Transient
+    private List<Object> reporteIncidencia;
+
+    @Transient
     private String nombreComuna; 
 
     @Transient 
     private String nombreEstadoEvento;
-    
-    @Transient
-    private Object reporteIncidencia;
 }

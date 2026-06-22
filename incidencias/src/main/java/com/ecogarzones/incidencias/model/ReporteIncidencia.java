@@ -93,6 +93,6 @@ public class ReporteIncidencia {
         this.prioridad_incidencia = prioridad;
     }
 
-    @Column(name = "id_evento", nullable = true) // 'true' permite registrar incidencias manuales que no vengan de un evento
+    @Column(name = "id_evento", nullable = true)
 private Long idEvento;
 }
