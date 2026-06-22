@@ -1,7 +1,7 @@
 - Estudiante: Matias Toloza Chaparro
 - Docente: Viviana Soledad Poblete Lopez
 - Asignatura: DESARROLLO FULLSTACK I_006D
-- Ingeniería en Informatica - Duoc Uc: Sede Maipú
+- Ingeniería en Informática - Duoc UC: Sede Maipú
 ---
 
 # GestionEcogarzones - Ecosistema de Microservicios
@@ -56,28 +56,27 @@ Cada microservicio expone de forma interna e independiente su documentación viv
 ### Acceso a interfaces Swagger locales:
 Para probar y revisar la estructura de los JSON (*Request Body*) y esquemas de respuesta, ejecute el microservicio correspondiente y acceda en su navegador web a las siguientes rutas:
 
-**Swagger Eventos:** `http://localhost:8082/swagger-ui/index.html`
-**Swagger Incidencias:** `http://localhost:8083/swagger-ui/index.html`
-**Swagger Administrador:** `http://localhost:8084/swagger-ui/index.html`
-**Swagger Pago:** `http://localhost:8085/swagger-ui/index.html`
-**Swagger Staff:** `http://localhost:8086/swagger-ui/index.html`
-**Swagger Inventario:** `http://localhost:8087/swagger-ui/index.html`
-**Swagger Transporte:** `http://localhost:8090/swagger-ui/index.html`
-**Swagger Boleta:** `http://localhost:8091/swagger-ui/index.html`
-**Swagger Cronograma:** `http://localhost:8092/swagger-ui/index.html`
-**Swagger Cliente:** `http://localhost:8093/swagger-ui/index.html#/`
-
+* **Swagger Eventos:** `http://localhost:8082/swagger-ui/index.html`
+* **Swagger Incidencias:** `http://localhost:8083/swagger-ui/index.html`
+* **Swagger Administrador:** `http://localhost:8084/swagger-ui/index.html`
+* **Swagger Pago:** `http://localhost:8085/swagger-ui/index.html`
+* **Swagger Staff:** `http://localhost:8086/swagger-ui/index.html`
+* **Swagger Inventario:** `http://localhost:8087/swagger-ui/index.html`
+* **Swagger Transporte:** `http://localhost:8090/swagger-ui/index.html`
+* **Swagger Boleta:** `http://localhost:8091/swagger-ui/index.html`
+* **Swagger Cronograma:** `http://localhost:8092/swagger-ui/index.html`
+* **Swagger Cliente:** `http://localhost:8093/swagger-ui/index.html#/`
 
 ---
 
-## 5. Tecnologías y PersistenciaUtilizadas
-* **Lenguaje de Programación:** Java 25 (OpenJDK)
-- **Framework Principal:** Spring Boot 3.3.4
-- **Ecosistema Cloud / Enrutamiento:** Spring Cloud Gateway (Módulo WebMVC)
-- **Persistencia de Datos:** Spring Data JPA / Hibernate ORM
-- **Motor de Base de Datos:** MySQL (Gestionado de manera eficiente a través de HikariCP)
-- **Gestor de Proyectos y Dependencias:** Apache Maven
-- **Control de Versiones y Respaldo:** Git & GitHub
+## 5. Tecnologías y Persistencia Utilizadas
+* **Lenguaje de Programación:** Java 21 (OpenJDK LTS)
+* **Framework Principal:** Spring Boot 3.3.4 / 4.x
+* **Ecosistema Cloud / Enrutamiento:** Spring Cloud Gateway (Módulo WebMVC)
+* **Persistencia de Datos:** Spring Data JPA / Spring Data JDBC / Hibernate ORM
+* **Motor de Base de Datos:** MySQL (Gestionado de manera eficiente a través de HikariCP)
+* **Gestor de Proyectos y Dependencias:** Apache Maven
+* **Control de Versiones y Respaldo:** Git & GitHub
 
 ### Mapa de Persistencia Relacional
 
@@ -89,7 +88,7 @@ Para probar y revisar la estructura de los JSON (*Request Body*) y esquemas de r
 | **MS Admin** | `administrador_ecogarzones` | `ms_administrador` (Perfiles y logs del personal administrativo). |
 | **MS Pago Servicio** | `pago_ecogarzones` | `ms_pago_service` (Transacciones y registros financieros). |
 | **MS Staff** | `staff_ecogarzones` | Control de contratos, tarifas horarias y disponibilidad del staff. |
-| **MS Inventario** | `ecogarzones` | Catálogo de stock físico, insumos y auditoría de materiales. |
+| **MS Inventario** | `ecogarzones_db` | Catálogo de stock físico, insumos y auditoría de materiales. |
 | **MS Transporte** | `transporte_ecogarzones` | `transporte` (Control logístico de traslados e insumos). |
 | **MS Electrónica** | `boleta_ecogarzones` | `boleta` (Ficheros PDF y metadatos de facturación electrónica). |
 | **MS Cronograma** | `cronograma_ecogarzones` | `actividades`, `ms_cronograma_actividades` (Secuencia del evento). |
@@ -102,15 +101,15 @@ Para probar y revisar la estructura de los JSON (*Request Body*) y esquemas de r
 ### A. Ejecución en Entorno Local (Localhost)
 
 #### 1. Requisitos Previos
-- Contar con el JDK 25 configurado.
+- Contar con el JDK 21 configurado en las variables de entorno.
 - Apache Maven 3.9+ instalado.
-- Motor MySQL activo (mediante herramientas como XAMPP) con los **11 esquemas independientes** creados previamente mediante phpMyAdmin. Las tablas internas se estructurarán automáticamente en el primer inicio gracias a la propiedad `ddl-auto=update` de Hibernate.
+- Motor MySQL activo (mediante herramientas como XAMPP o MySQL Workbench) con los **11 esquemas independientes** creados previamente mediante phpMyAdmin. Las tablas internas se estructurarán automáticamente en el primer inicio gracias a la propiedad `ddl-auto=update` de Hibernate.
 
 #### 2. Orden de Arranque Crítico
-Para evitar la pérdida de trazas de red y fallos de enrutamiento temprano, ejecute los proyectos Java en este estricto orden secuencial:
-1. **Servicios Core (Negocio Base):** Ejecutar individualmente `MS Autenticación`, `MS Cliente` y `MS Staff`.
-2. **Servicios de Operación (Dependientes):** Ejecutar `MS Evento`, `MS Incidencias`, `MS Cronograma` y los servicios financieros/logísticos restantes.
-3. **Frontera de Red (API Gateway):** Levantar el proyecto `Gateway` (Puerto `9090`) una vez que todos los puertos anteriores se encuentren activos y respondiendo con estabilidad.
+Para evitar fallos en la resolución de rutas perimetrales y colisiones de red, se sugiere el siguiente flujo secuencial de inicio:
+1. **Frontera de Red (API Gateway):** Levantar el proyecto `Gateway` (Puerto `9090`) para establecer la base de enrutamiento del ecosistema.
+2. **Servicios Core (Negocio Base):** Ejecutar individualmente `MS Autenticación`, `MS Cliente` y `MS Staff`.
+3. **Servicios de Operación (Dependientes):** Ejecutar `MS Evento`, `MS Incidencias`, `MS Cronograma`, `MS Inventario`, `MS Transporte`, `MS Electrónica` y `MS Pago Servicio`.
 
 #### 3. Comandos de Compilación
 Abra una terminal en la carpeta raíz de cada microservicio y ejecute:
