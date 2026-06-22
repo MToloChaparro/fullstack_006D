@@ -55,9 +55,18 @@ Cada microservicio expone de forma interna e independiente su documentación viv
 
 ### Acceso a interfaces Swagger locales:
 Para probar y revisar la estructura de los JSON (*Request Body*) y esquemas de respuesta, ejecute el microservicio correspondiente y acceda en su navegador web a las siguientes rutas:
-* **Swagger Incidencias:** `http://localhost:8083/swagger-ui/index.html`
-* **Swagger Eventos:** `http://localhost:8082/swagger-ui/index.html`
-* *(Aplica la misma estructura de ruta sustituyendo el puerto respectivo del microservicio que desee auditar de forma aislada: `http://localhost:[PUERTO_MS]/swagger-ui/index.html`)*
+
+**Swagger Eventos:** `http://localhost:8082/swagger-ui/index.html`
+**Swagger Incidencias:** `http://localhost:8083/swagger-ui/index.html`
+**Swagger Administrador:** `http://localhost:8084/swagger-ui/index.html`
+**Swagger Pago:** `http://localhost:8085/swagger-ui/index.html`
+**Swagger Staff:** `http://localhost:8086/swagger-ui/index.html`
+**Swagger Inventario:** `http://localhost:8087/swagger-ui/index.html`
+**Swagger Transporte:** `http://localhost:8090/swagger-ui/index.html`
+**Swagger Boleta:** `http://localhost:8091/swagger-ui/index.html`
+**Swagger Cronograma:** `http://localhost:8092/swagger-ui/index.html`
+**Swagger Cliente:** `http://localhost:8093/swagger-ui/index.html#/`
+
 
 ---
 
